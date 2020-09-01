@@ -1,0 +1,2 @@
+SET result=%date:~4,2%%date:~7,2%%date:~10,4%_%time:~0,2%%time:~3,2%
+\\SHARENAME\7Zip\7z.exe a "\\SHARENAME\malware samples\%computername%_%result%.zip" "{{filename}}" secure -ppassword
