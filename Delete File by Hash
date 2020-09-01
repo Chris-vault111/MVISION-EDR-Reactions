@@ -1,0 +1,8 @@
+$orighash ='{{filehash}}'
+
+dir "{{directory}}\*.*" | foreach {$filehash = Get-FileHash -Path $_.FullName -Algorithm MD5
+
+ if ($origHash -eq $fileHash.hash) {
+   Remove-Item –path $_.Fullname  
+ }
+ }
